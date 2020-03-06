@@ -19,8 +19,8 @@
  </br></br></br>
   
   <div align=center> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/3.PNG" width="345"> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/4.PNG" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/3.png" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/4.png" width="345"> 
 </div>
 
 
@@ -92,15 +92,15 @@ _mInputView.delegate = self;
 ```
 <br><br><br>
  <div align=center> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/5.PNG" width="345"> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/6.PNG" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/5.png" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/6.png" width="345"> 
 </div>
   
   <br><br>
   
   <div align=center> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/7.PNG" width="345"> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/8.PNG" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/7.png" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/8.png" width="345"> 
 </div>
 <br><br>
 
