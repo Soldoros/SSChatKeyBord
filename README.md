@@ -12,10 +12,19 @@
 
 
 <div align=center> 
-  <img src= "https://raw.githubusercontent.com/Soldoros/SSChat/master/datu/1.PNG" width="345"> 
-  <img src= "https://raw.githubusercontent.com/Soldoros/SSChat/master/datu/4.PNG" width="345">
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/1.png" width="345"> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/2.png" width="345">
+</div>
+  
+ </br></br></br>
+  
+  <div align=center> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/3.png" width="345"> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/4.png" width="345">
 </div>
 
+
+</br></br></br>
 
 1.将 SSChatKeyBoard 文件夹拖入到工程
 
@@ -81,12 +90,19 @@ _mInputView.delegate = self;
 //Multi-function view button click callback
 -(void)SSChatKeyBoardInputViewBtnClickFunction:(NSInteger)index;
 ```
-<br>
-<div align=center> 
-  <img src= "https://raw.githubusercontent.com/Soldoros/SSChat/master/datu/6.PNG" width="345"> 
-  <img src= "https://raw.githubusercontent.com/Soldoros/SSChat/master/datu/10.PNG" width="345">
+<br><br><br>
+ <div align=center> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/5.png" width="345"> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/6.png" width="345">
 </div>
-<br>
+  
+  <br><br>
+  
+  <div align=center> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/7.png" width="345"> 
+  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/8.png" width="345">
+</div>
+<br><br>
 
 
 
