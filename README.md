@@ -12,8 +12,8 @@
 
 
 <div align=center> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/1.PNG" width="345"> 
-  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/2.PNG" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/1.png" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/2.png" width="345"> 
 </div>
   
  </br></br></br>
