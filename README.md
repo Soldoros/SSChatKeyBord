@@ -12,15 +12,15 @@
 
 
 <div align=center> 
-  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/1.png" width="345"> 
-  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/2.png" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/1.png" width="300"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/2.png" width="300"> 
 </div>
   
  </br></br></br>
   
   <div align=center> 
-  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/3.png" width="345"> 
-  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/4.png" width="345"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/3.png" width="300"> 
+  <img src= "https://github.com/Soldoros/SSChatKeyBord/blob/master/datu/4.png" width="300"> 
 </div>
 
 
