@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-SSChat/Pods-SSChat-resources.sh
+${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle
+${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle
+${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle
+${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/Required/ShareSDK.bundle
+${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle
