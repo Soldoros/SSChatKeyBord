@@ -12,15 +12,15 @@
 
 
 <div align=center> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/1.png" width="345"> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/2.png" width="345">
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/1.PNG" width="345"> 
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/2.PNG" width="345"> 
 </div>
   
  </br></br></br>
   
   <div align=center> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/3.png" width="345"> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/4.png" width="345">
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/3.PNG" width="345"> 
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/4.PNG" width="345"> 
 </div>
 
 
@@ -92,15 +92,15 @@ _mInputView.delegate = self;
 ```
 <br><br><br>
  <div align=center> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/5.png" width="345"> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/6.png" width="345">
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/5.PNG" width="345"> 
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/6.PNG" width="345"> 
 </div>
   
   <br><br>
   
   <div align=center> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/7.png" width="345"> 
-  <https://raw.githubusercontent.com/Soldoros/SSChatKeyBord/master/datu/8.png" width="345">
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/7.PNG" width="345"> 
+  <img src= "https://raw.githubusercontent.com/SSChatKeyBord/SSChat/master/datu/8.PNG" width="345"> 
 </div>
 <br><br>
 
