@@ -22,6 +22,12 @@
 -(instancetype)init{
     if(self = [super init]){
         _backViewH = SCREEN_Height - SafeAreaBottom_Height - SSChatKeyBoardInputViewH;
+        self.datas = [NSMutableArray new];
+        
+        for(int i=0;i<30;++i){
+            [self.datas addObject:@(i)];
+        }
+        
     }
     return self;
 }
@@ -35,12 +41,17 @@
     _keyBordView.delegate = self;
     [self.view addSubview:_keyBordView];
     
-    cout(@(SCREEN_Height));
-    cout(@(MainViewSub_Height));
-    cout(@(_backViewH));
+    
     self.mTableView.frame = CGRectMake(0, SafeAreaTop_Height, SCREEN_Width, _backViewH);
     
+//    [self.mTableView registerClass:NSClassFromString(@"SSChatTextCell") forCellReuseIdentifier:SSChatTextCellId];
+//    [self.mTableView registerClass:NSClassFromString(@"SSChatImageCell") forCellReuseIdentifier:SSChatImageCellId];
+//    [self.mTableView registerClass:NSClassFromString(@"SSChatVoiceCell") forCellReuseIdentifier:SSChatVoiceCellId];
+//    [self.mTableView registerClass:NSClassFromString(@"SSChatMapCell") forCellReuseIdentifier:SSChatMapCellId];
+//    [self.mTableView registerClass:NSClassFromString(@"SSChatVideoCell") forCellReuseIdentifier:SSChatVideoCellId];
+//
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -50,18 +61,20 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.datas.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 120;
+    return 80;
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     if(cell == nil){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
     }
+    cell.textLabel.text = makeMoreStr(@"第",makeStrWithInt(indexPath.row+1),@"行",nil);
     return cell;
 }
 
@@ -70,7 +83,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     [_keyBordView SetSSChatKeyBoardInputViewEndEditing];
-   
 }
 
 
@@ -85,12 +97,10 @@
     CGFloat height = _backViewH - keyBoardHeight;
     [UIView animateWithDuration:changeTime animations:^{
         self.mTableView.frame = CGRectMake(0, SafeAreaTop_Height, SCREEN_Width, height);
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:19 inSection:0];
-        [self.mTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        [self updateTableView:YES];
     } completion:^(BOOL finished) {
         
     }];
-    
 }
 
 
@@ -98,6 +108,16 @@
 -(void)SSChatKeyBoardInputViewBtnClick:(NSString *)string{
     
     [self showTime:@"发送消息"];
+    [self.datas addObject:@(100)];
+    [self updateTableView:YES];
+}
+
+-(void)updateTableView:(BOOL)animation{
+    [self.mTableView reloadData];
+    if(self.datas.count>0){
+        NSIndexPath *indexPath = [NSIndexPath     indexPathForRow:self.datas.count-1 inSection:0];
+        [self.mTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:animation];
+    }
 }
 
 @end
