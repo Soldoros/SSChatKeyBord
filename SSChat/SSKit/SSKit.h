@@ -11,7 +11,7 @@
 
 #import "BaseVirtualController.h"
 #import "SSAFRequest.h"
-#import "SSAttributeManager.h"
+#import "SSConfigManager.h"
 
 #import "SSOtherDefine.h"
 #import "SSUserDefine.h"

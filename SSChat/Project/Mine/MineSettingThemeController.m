@@ -54,7 +54,7 @@
         [mView[i] addSubview:mButton[i]];
         mButton[i].tag = i + 10;
         [mButton[i] addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        if(i == [SSAttributeManager shareAttributeManager].themeType-1){
+        if(i == [SSConfigManager shareManager].themeType-1){
             [mButton[i] setTitle:@"√" forState:UIControlStateNormal];
         }
     }
@@ -69,7 +69,7 @@
     }
     
     [sender setTitle:@"√" forState:UIControlStateNormal];
-    [SSAttributeManager shareAttributeManager].themeType = sender.tag - 9;
+    [SSConfigManager shareManager].themeType = sender.tag - 9;
     
     [self viewWillAppear:YES];
 }

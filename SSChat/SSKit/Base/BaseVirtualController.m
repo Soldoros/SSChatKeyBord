@@ -320,7 +320,7 @@
         self.leftBtn2.top = StatuBar_Height;
         self.leftBtn2.selected = NO;
         self.leftBtn2.tag = 11;
-        [self.leftBtn2 addTarget:self action:@selector(navgationButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [self.leftBtn2 addTarget:self action:@selector(navgationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.navtionBar addSubview:self.leftBtn2];
     }
     
@@ -468,15 +468,19 @@
 //标签栏部分
 //=========================================
 
--(void)setItemImg1:(NSString *)imgStr1 img2:(NSString *)imgStr2 title:(NSString *)titleStr color1:(UIColor *)color1 color2:(UIColor *)color2{
+-(void)setItemIndex:(NSInteger)index color1:(UIColor *)color1 color2:(UIColor *)color2{
     
-    UIImage *nomImg = [[UIImage imageNamed:imgStr1] imageWithColor:color1];
-    UIImage *secImg = [[UIImage imageNamed:imgStr2] imageWithColor:color2];
+    NSArray *arr1 = [SSConfigManager shareManager].nomImgages;
+    NSArray *arr2 =  [SSConfigManager shareManager].secImgages;
+    NSArray *arr3 = [SSConfigManager shareManager].tabTitles;
+    
+    UIImage *nomImg = [[UIImage imageNamed:arr1[index]] imageWithColor:color1];
+    UIImage *secImg = [[UIImage imageNamed:arr2[index]] imageWithColor:color2];
     
     nomImg = [nomImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     secImg = [secImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    self.tabBarItem.title = titleStr;
+    self.tabBarItem.title = arr3[index];
     self.tabBarItem.image = nomImg;
     self.tabBarItem.selectedImage = secImg;
     

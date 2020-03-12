@@ -1,35 +1,33 @@
 //
-//  SSAttributeManager.m
+//  SSConfigManager.m
 //  SSChat
 //
-//  Created by soldoros on 2020/3/3.
+//  Created by soldoros on 2020/3/12.
 //  Copyright © 2020 soldoros. All rights reserved.
 //
 
-#import "SSAttributeManager.h"
-//#import <IQKeyboardManager/IQKeyboardManager.h>
+#import "SSConfigManager.h"
 
 static  NSString *Model_fontType   = @"fontType";
 static  NSString *Model_themeType  = @"themeType";
 
+static SSConfigManager *config = nil;
 
-static SSAttributeManager *attribute = nil;
-
-@implementation SSAttributeManager
-
+@implementation SSConfigManager
 
 @synthesize    fontType      =      _fontType;
 @synthesize    themeType     =      _themeType;
 
 
+
 //初始化系统基础信息
-+(SSAttributeManager *)shareAttributeManager{
++(SSConfigManager *)shareManager{
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        attribute = [[SSAttributeManager alloc]init];
+        config = [[SSConfigManager alloc]init];
     });
-    return attribute;
+    return config;
 }
 
 -(instancetype)init{
@@ -38,6 +36,11 @@ static SSAttributeManager *attribute = nil;
         _userDefaults = [NSUserDefaults standardUserDefaults];
         self.fontType = self.fontType;
         self.themeType = self.themeType;
+        
+        self.nomImgages = @[@"Tab_message_nol",@"Tab_contact_nol",@"Tab_wode_nol"];
+        
+        self.secImgages = @[@"Tab_message_sel",@"Tab_contact_sel",@"Tab_wode_sel"];
+        self.tabTitles = @[@"消息",@"联系人",@"我的"];
     }
     return self;
 }
@@ -47,41 +50,48 @@ static SSAttributeManager *attribute = nil;
     
 }
 
+
+
+
+
 //获取字体
--(AttributeFontType)fontType{
-    AttributeFontType fontType =  [_userDefaults integerForKey:Model_fontType];
+-(ConfigFontType)fontType{
+    ConfigFontType fontType =  [_userDefaults integerForKey:Model_fontType];
     if(fontType == 0){
         cout(@"未初始化字体");
-        fontType = AttributeFontMiddle;
+        fontType = ConfigFontMiddle;
     }
     return fontType;
 }
 
 //获取主题
--(AttributeThemeType)themeType{
-    AttributeThemeType themeType = [_userDefaults integerForKey:Model_themeType];
+-(ConfigThemeType)themeType{
+    ConfigThemeType themeType = [_userDefaults integerForKey:Model_themeType];
     if(themeType == 0){
         cout(@"未初始化主题");
-        themeType = AttributeThemeWhite;
+        themeType = ConfigThemeWhite;
     }
     return themeType;
 }
 
 
 //设置字体
--(void)setFontType:(AttributeFontType)fontType{
+-(void)setFontType:(ConfigFontType)fontType{
     _fontType = fontType;
     [_userDefaults setInteger:_fontType forKey:Model_fontType];
     
     switch (_fontType) {
-        case AttributeFontMin:
-            
+        case ConfigFontMin:{
+            self.chatFont   = makeFont(14);
+        }
             break;
-        case AttributeFontMiddle:
-        
+        case ConfigFontMiddle:{
+            self.chatFont   = makeFont(16);
+        }
         break;
-        case AttributeFontMax:
-        
+        case ConfigFontMax:{
+            self.chatFont   = makeFont(18);
+        }
         break;
             
         default:
@@ -91,15 +101,15 @@ static SSAttributeManager *attribute = nil;
 }
 
 //设置主题
--(void)setThemeType:(AttributeThemeType)themeType{
-    _themeType = themeType;
+-(void)setThemeType:(ConfigThemeType)themeType{
+    _themeType = themeType; 
     [_userDefaults setInteger:_themeType forKey:Model_themeType];
     
     
     switch (_themeType) {
 
             //白色+主题绿
-        case AttributeThemeWhite:{
+        case ConfigThemeWhite:{
             self.titleColor   = makeColorHex(@"#20D3B3");
             self.navBarColor  = makeColorRgb(237, 238, 239);
             self.tabBarColor  = [UIColor whiteColor];
@@ -113,7 +123,7 @@ static SSAttributeManager *attribute = nil;
         }
             break;
             //黑色
-        case AttributeThemeBlack:{
+        case ConfigThemeBlack:{
             self.titleColor   = [UIColor blackColor];
             self.navBarColor  = makeColorRgb(38, 38, 38);
             self.navLineColor    = makeColorRgb(38, 38, 38);
@@ -127,7 +137,7 @@ static SSAttributeManager *attribute = nil;
         }
             break;
             //蓝色
-        case AttributeThemeBlue:{
+        case ConfigThemeBlue:{
             self.titleColor   = makeColorRgb(57, 152, 247);
             self.navBarColor  = makeColorRgb(57, 152, 247);
             self.navLineColor    = makeColorRgb(57, 152, 247);
@@ -141,7 +151,7 @@ static SSAttributeManager *attribute = nil;
         }
             break;
             //绿色
-        case AttributeThemeGreen:{
+        case ConfigThemeGreen:{
             self.titleColor   = makeColorHex(@"20D3B3");
             self.navBarColor  = makeColorHex(@"20D3B3");
             self.navLineColor    = makeColorHex(@"20D3B3");
@@ -155,7 +165,7 @@ static SSAttributeManager *attribute = nil;
         }
             break;
             //红色
-        case AttributeThemeRed:{
+        case ConfigThemeRed:{
             self.titleColor   = makeColorRgb(215, 19, 28);
             self.navBarColor  = makeColorRgb(215, 19, 28);
             self.navLineColor    = makeColorRgb(215, 19, 28);
@@ -169,7 +179,7 @@ static SSAttributeManager *attribute = nil;
         }
             break;
             //黄色
-        case AttributeThemeYellow:{
+        case ConfigThemeYellow:{
             self.navBarColor  = makeColorRgb(254, 230, 88);
             self.navLineColor    = makeColorRgb(254, 230, 88);
             self.titleColor   = makeColorRgb(254, 230, 88);
@@ -189,7 +199,4 @@ static SSAttributeManager *attribute = nil;
 }
 
 
-
 @end
-
-

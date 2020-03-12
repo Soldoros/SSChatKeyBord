@@ -26,22 +26,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MessageController   *vc1 = [[MessageController alloc]initWithRoot:YES];
+    MessageController  *vc1 = [[MessageController alloc]initWithRoot:YES];
     ContactController  *vc2 = [[ContactController alloc]initWithRoot:YES];
-    MineController  *vc3 = [[MineController alloc]initWithRoot:YES];
+    MineController     *vc3 = [[MineController alloc]initWithRoot:YES];
     
-    RootNavigationController *nav1 = [self setNav:vc1 title:@"消息" nomImg:@"Tab_message_nol" selImg:@"Tab_message_sel"];
-    RootNavigationController *nav2 = [self setNav:vc2 title:@"联系人" nomImg:@"Tab_contact_nol" selImg:@"Tab_contact_sel"];
-    RootNavigationController *nav3 = [self setNav:vc3 title:@"我的" nomImg:@"Tab_wode_nol" selImg:@"Tab_wode_sel"];
+    RootNavigationController *nav1 = [self setNav:vc1 index:0];
+    RootNavigationController *nav2 = [self setNav:vc2 index:1];
+    RootNavigationController *nav3 = [self setNav:vc3 index:2];
     
     self.viewControllers = @[nav1,nav2,nav3];
     self.tabBar.backgroundColor = BackGroundColor;
 }
 
 
--(RootNavigationController *)setNav:(BaseController *)vc title:(NSString *)title nomImg:(NSString *)img1 selImg:(NSString *)img2{
+-(RootNavigationController *)setNav:(BaseController *)vc index:(NSInteger)index{
     
-    [vc setItemImg1:img1 img2:img2 title:title color1:TabBarTintDefaultColor color2:TabBarTintSelectColor];
+    [vc setItemIndex:index color1:TabBarTintDefaultColor color2:TabBarTintSelectColor];
     RootNavigationController *nav = [[RootNavigationController alloc]initWithRootViewController:vc];
     return nav;
     

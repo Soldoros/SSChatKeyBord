@@ -189,7 +189,7 @@ typedef void (^ActionBtnClick)(NSInteger index);
 //=========================================
 
 //设置当前标签栏按钮的图片和文字 以及颜色
--(void)setItemImg1:(NSString *)imgStr1 img2:(NSString *)imgStr2 title:(NSString *)titleStr color1:(UIColor *)color1 color2:(UIColor *)color2;
+-(void)setItemIndex:(NSInteger)index color1:(UIColor *)color1 color2:(UIColor *)color2;
 
 //设置一个特殊的tabbarItem
 -(void)setSpecialTabBarItem:(NSString *)img1 img2:(NSString *)img2 title:(NSString *)title color1:(UIColor *)color1 color2:(UIColor *)color2;

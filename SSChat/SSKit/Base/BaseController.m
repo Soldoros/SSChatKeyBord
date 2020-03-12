@@ -45,8 +45,8 @@
 }
 
 -(void)initUserDatas{
-    _attributeManager = [SSAttributeManager shareAttributeManager];
-    _barStyle = _attributeManager.barStyle;
+    _config = [SSConfigManager shareManager];
+    _barStyle = _config.barStyle;
     _user = [NSUserDefaults standardUserDefaults];
 }
 
@@ -73,7 +73,7 @@
     [self setNavgationBarLine:[UIColor clearColor]];
     [self setNavgationTitleFont:makeFont(18) color:NavBarTitColor];
     if(!_isRoot){
-        [self setLeftOneBtnImg:_attributeManager.leftBtnImg];
+        [self setLeftOneBtnImg:_config.leftBtnImg];
     }
 }
 
@@ -119,21 +119,18 @@
 -(void)updateAppAttbuteInterface{
     
     [self setNavgationBarColorImg:NavBarColor];
-    [self setNavgationBarLine:_attributeManager.navLineColor];
+    [self setNavgationBarLine:_config.navLineColor];
     [self setNavgationTitleFont:makeFont(18) color:NavBarTitColor];
     
     if(_isRoot == NO){
-        [self setLeftOneBtnImg:_attributeManager.leftBtnImg];
+        [self setLeftOneBtnImg:_config.leftBtnImg];
     }
-    _barStyle = _attributeManager.barStyle;
+    _barStyle = _config.barStyle;
     [self setNeedsStatusBarAppearanceUpdate];
     
-    NSArray *arr1 = @[@"Tab_message_nol",@"Tab_contact_nol",@"Tab_wode_nol"];
-    NSArray *arr2 = @[@"Tab_message_sel",@"Tab_contact_sel",@"Tab_wode_sel"];
-    NSArray *arr3 = @[@"消息",@"联系人",@"我的"];
-    for(int i=0;i<3;++i){
+    for(int i=0;i<_config.tabTitles.count;++i){
         RootNavigationController *nav = self.tabBarController.viewControllers[i];
-        [nav.viewControllers[0] setItemImg1:arr1[i] img2:arr2[i] title:arr3[i] color1:TabBarTintDefaultColor color2:TabBarTintSelectColor];
+        [nav.viewControllers[0] setItemIndex:i color1:TabBarTintDefaultColor color2:TabBarTintSelectColor];
     }
 }
 

@@ -163,6 +163,7 @@
 		AF24B59F241208270002812E /* SSChatKeyBoardInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24B50D241208270002812E /* SSChatKeyBoardInputView.m */; };
 		AF24B5A0241208270002812E /* SSChatKeyBordSymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24B50F241208270002812E /* SSChatKeyBordSymbolView.m */; };
 		AF24B5A1241208270002812E /* SSChatKeyBordFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24B510241208270002812E /* SSChatKeyBordFunctionView.m */; };
+		AF5D958E2419CD2A00ADEF86 /* SSConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D958C2419CD2A00ADEF86 /* SSConfigManager.m */; };
 		AFF5983B240DF0C20088F28E /* AccountLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5983A240DF0C20088F28E /* AccountLoginController.m */; };
 		AFF5983E240DF6440088F28E /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5983D240DF6440088F28E /* ContactController.m */; };
 		AFF59841240DF64D0088F28E /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF59840240DF64D0088F28E /* MessageController.m */; };
@@ -178,8 +179,6 @@
 		AFF59874240DF9DF0088F28E /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5986D240DF9DF0088F28E /* RootNavigationController.m */; };
 		AFF59875240DF9DF0088F28E /* SSRootManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5986F240DF9DF0088F28E /* SSRootManager.m */; };
 		AFF59876240DF9DF0088F28E /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF59870240DF9DF0088F28E /* RootTabBarController.m */; };
-		AFF59879240E02610088F28E /* SSAttributeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF59878240E02610088F28E /* SSAttributeManager.m */; };
-		AFF5987C240E075F0088F28E /* SSDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5987B240E075F0088F28E /* SSDeviceManager.m */; };
 		AFF5987F240E316E0088F28E /* AccountRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5987E240E316E0088F28E /* AccountRegisterController.m */; };
 		AFF59885240E5CA80088F28E /* UIDevice+SSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF59884240E5CA80088F28E /* UIDevice+SSAdd.m */; };
 		AFFC7C7D24090AA300F561B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7C7C24090AA300F561B8 /* AppDelegate.m */; };
@@ -420,6 +419,8 @@
 		AF24B50E241208270002812E /* SSChatKeyBordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSChatKeyBordView.h; sourceTree = "<group>"; };
 		AF24B50F241208270002812E /* SSChatKeyBordSymbolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBordSymbolView.m; sourceTree = "<group>"; };
 		AF24B510241208270002812E /* SSChatKeyBordFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBordFunctionView.m; sourceTree = "<group>"; };
+		AF5D958C2419CD2A00ADEF86 /* SSConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSConfigManager.m; sourceTree = "<group>"; };
+		AF5D958D2419CD2A00ADEF86 /* SSConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSConfigManager.h; sourceTree = "<group>"; };
 		AFF59839240DF0C20088F28E /* AccountLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountLoginController.h; sourceTree = "<group>"; };
 		AFF5983A240DF0C20088F28E /* AccountLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountLoginController.m; sourceTree = "<group>"; };
 		AFF5983C240DF6440088F28E /* ContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
@@ -450,10 +451,6 @@
 		AFF5986F240DF9DF0088F28E /* SSRootManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRootManager.m; sourceTree = "<group>"; };
 		AFF59870240DF9DF0088F28E /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
 		AFF59871240DF9DF0088F28E /* SSRootManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRootManager.h; sourceTree = "<group>"; };
-		AFF59877240E02610088F28E /* SSAttributeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAttributeManager.h; sourceTree = "<group>"; };
-		AFF59878240E02610088F28E /* SSAttributeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAttributeManager.m; sourceTree = "<group>"; };
-		AFF5987A240E075F0088F28E /* SSDeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSDeviceManager.h; sourceTree = "<group>"; };
-		AFF5987B240E075F0088F28E /* SSDeviceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSDeviceManager.m; sourceTree = "<group>"; };
 		AFF5987D240E316E0088F28E /* AccountRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountRegisterController.h; sourceTree = "<group>"; };
 		AFF5987E240E316E0088F28E /* AccountRegisterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountRegisterController.m; sourceTree = "<group>"; };
 		AFF59883240E5CA80088F28E /* UIDevice+SSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SSAdd.h"; sourceTree = "<group>"; };
@@ -849,12 +846,10 @@
 				AFF5986D240DF9DF0088F28E /* RootNavigationController.m */,
 				AFF59868240DF9DE0088F28E /* RootTabBarController.h */,
 				AFF59870240DF9DF0088F28E /* RootTabBarController.m */,
+				AF5D958D2419CD2A00ADEF86 /* SSConfigManager.h */,
+				AF5D958C2419CD2A00ADEF86 /* SSConfigManager.m */,
 				AFF5986E240DF9DF0088F28E /* SSAccountManager.h */,
 				AFF5986B240DF9DF0088F28E /* SSAccountManager.m */,
-				AFF59877240E02610088F28E /* SSAttributeManager.h */,
-				AFF59878240E02610088F28E /* SSAttributeManager.m */,
-				AFF5987A240E075F0088F28E /* SSDeviceManager.h */,
-				AFF5987B240E075F0088F28E /* SSDeviceManager.m */,
 				AFF5986C240DF9DF0088F28E /* SSDocumentManager.h */,
 				AFF59869240DF9DE0088F28E /* SSDocumentManager.m */,
 				AFF59871240DF9DF0088F28E /* SSRootManager.h */,
@@ -1437,6 +1432,7 @@
 				AFF59856240DF7240088F28E /* ContactDatas.m in Sources */,
 				AFF59876240DF9DF0088F28E /* RootTabBarController.m in Sources */,
 				AF20E279240F9D66004F0B84 /* SSChatTextCell.m in Sources */,
+				AF5D958E2419CD2A00ADEF86 /* SSConfigManager.m in Sources */,
 				AFF5983E240DF6440088F28E /* ContactController.m in Sources */,
 				AF24B514241208270002812E /* UUProgressHUD.m in Sources */,
 				AFFC7D3424090EEF00F561B8 /* SSRequestEncryption.m in Sources */,
@@ -1468,8 +1464,6 @@
 				AF24B59F241208270002812E /* SSChatKeyBoardInputView.m in Sources */,
 				AFF59841240DF64D0088F28E /* MessageController.m in Sources */,
 				AF24B5A1241208270002812E /* SSChatKeyBordFunctionView.m in Sources */,
-				AFF59879240E02610088F28E /* SSAttributeManager.m in Sources */,
-				AFF5987C240E075F0088F28E /* SSDeviceManager.m in Sources */,
 				AFF59875240DF9DF0088F28E /* SSRootManager.m in Sources */,
 				AFFC7D5724090EEF00F561B8 /* NSString+SSAdd.m in Sources */,
 				AFFC7D5A24090EEF00F561B8 /* UIColor+SSAdd.m in Sources */,

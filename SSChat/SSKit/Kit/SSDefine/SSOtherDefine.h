@@ -47,26 +47,26 @@
 
 
 //主题色
-#define TitleColor    [SSAttributeManager shareAttributeManager].titleColor
+#define TitleColor    [SSConfigManager shareManager].titleColor
 //普通背景色
-#define BackGroundColor  [SSAttributeManager shareAttributeManager].backGroundColor
+#define BackGroundColor  [SSConfigManager shareManager].backGroundColor
 //cell线条颜色
 #define CellLineColor  makeColorRgb(234, 234, 234)
 //按钮颜色
-#define ButtonColor  [SSAttributeManager shareAttributeManager].titleColor
+#define ButtonColor  [SSConfigManager shareManager].titleColor
 
 //线条颜色
-#define LineColor  [SSAttributeManager shareAttributeManager].navLineColor
+#define LineColor  [SSConfigManager shareManager].navLineColor
 //导航栏颜色
-#define NavBarColor  [SSAttributeManager shareAttributeManager].navBarColor
+#define NavBarColor  [SSConfigManager shareManager].navBarColor
 //导航栏颜色
-#define NavBarTitColor  [SSAttributeManager shareAttributeManager].navTintColor
+#define NavBarTitColor  [SSConfigManager shareManager].navTintColor
 //标签栏颜色
-#define TabbarColor  [SSAttributeManager shareAttributeManager].tabBarColor
+#define TabbarColor  [SSConfigManager shareManager].tabBarColor
 //标签栏字体未选中的颜色
-#define TabBarTintDefaultColor  [SSAttributeManager shareAttributeManager].tabBarTintDefaultColor
+#define TabBarTintDefaultColor  [SSConfigManager shareManager].tabBarTintDefaultColor
 //标签栏字体选中的颜色
-#define TabBarTintSelectColor   [SSAttributeManager shareAttributeManager].tabBarTintSelectColor
+#define TabBarTintSelectColor   [SSConfigManager shareManager].tabBarTintSelectColor
 
 
 

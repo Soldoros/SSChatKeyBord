@@ -24,12 +24,12 @@
 
 
 #import "AppDelegate.h"
-#import "SSAttributeManager.h"
+#import "SSConfigManager.h"
 #import "SSRootManager.h"
 
 @interface AppDelegate ()
 
-@property(nonatomic,strong)SSAttributeManager *attributeManager;
+@property(nonatomic,strong)SSConfigManager *config;
 
 @end
 
@@ -38,10 +38,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    _attributeManager = [SSAttributeManager shareAttributeManager];
+    _config = [SSConfigManager shareManager];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = _attributeManager.backGroundColor;
+    self.window.backgroundColor = _config.backGroundColor;
     [self.window makeKeyAndVisible];
 
     [SSRootManager shareRootManager];

@@ -1,27 +1,28 @@
 //
-//  SSAttributeManager.h
+//  SSConfigManager.h
 //  SSChat
 //
-//  Created by soldoros on 2020/3/3.
+//  Created by soldoros on 2020/3/12.
 //  Copyright © 2020 soldoros. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 
+
 /**
  
  app字号设置
  
- - AttributeFontMin: 小号字体
- - AttributeFontMiddle: 中号字体
- - AttributeFontMax: 大号字体
+ - ConfigFontMin: 小号字体
+ - ConfigFontMiddle: 中号字体
+ - ConfigFontMax: 大号字体
  */
-typedef NS_ENUM(NSInteger,AttributeFontType) {
+typedef NS_ENUM(NSInteger,ConfigFontType) {
     
-    AttributeFontMin = 1,
-    AttributeFontMiddle,
-    AttributeFontMax,
+    ConfigFontMin = 1,
+    ConfigFontMiddle,
+    ConfigFontMax,
 };
 
 
@@ -29,39 +30,47 @@ typedef NS_ENUM(NSInteger,AttributeFontType) {
  
  app主题色设置
  
- - AttributeThemeWhite: 白色
- - AttributeThemeBlack: 黑色
- - AttributeThemeBlue: 蓝色
- - AttributeThemeGreen: 绿色
- - AttributeThemeRed: 红色
- - AttributeThemeYellow: 黄色
+ - ConfigThemeWhite: 白色
+ - ConfigThemeBlack: 黑色
+ - ConfigThemeBlue: 蓝色
+ - ConfigThemeGreen: 绿色
+ - ConfigThemeRed: 红色
+ - ConfigThemeYellow: 黄色
  */
-typedef NS_ENUM(NSInteger,AttributeThemeType) {
+typedef NS_ENUM(NSInteger,ConfigThemeType) {
     
-    AttributeThemeWhite = 1,
-    AttributeThemeBlack,
-    AttributeThemeBlue,
-    AttributeThemeGreen,
-    AttributeThemeRed,
-    AttributeThemeYellow,
+    ConfigThemeWhite = 1,
+    ConfigThemeBlack,
+    ConfigThemeBlue,
+    ConfigThemeGreen,
+    ConfigThemeRed,
+    ConfigThemeYellow,
 };
 
 
-
-@interface SSAttributeManager : NSObject
+@interface SSConfigManager : NSObject
 
 
 //初始化APP属性
-+(SSAttributeManager *)shareAttributeManager;
++(SSConfigManager *)shareManager;
 
 @property(nonatomic, strong)NSUserDefaults *userDefaults;
 
+
+//tab的默认图 选中图 文字
+@property(nonatomic, strong)NSArray   *nomImgages;
+@property(nonatomic, strong)NSArray   *secImgages;
+@property(nonatomic, strong)NSArray   *tabTitles;
+
+
 //字号规格
-@property(nonatomic, assign )AttributeFontType fontType;
+@property(nonatomic, assign)ConfigFontType fontType;
+//聊天字号
+@property(nonatomic, strong)UIFont    *chatFont;
+
+
 //主题
-@property(nonatomic, assign)AttributeThemeType  themeType;
-
-
+@property(nonatomic, assign)ConfigThemeType  themeType;
 //主题颜色
 @property(nonatomic, strong)UIColor   *titleColor;
 //导航栏+状态栏背景颜色
@@ -88,8 +97,8 @@ typedef NS_ENUM(NSInteger,AttributeThemeType) {
 @property(nonatomic, strong)NSString   *chatBackImage;
 
 
-@end
 
+@end
 
 
 

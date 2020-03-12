@@ -26,7 +26,7 @@
 @property(nonatomic,assign)UIStatusBarStyle barStyle;
 //单例
 @property(nonatomic,strong)NSUserDefaults *user;
-@property(nonatomic,strong)SSAttributeManager *attributeManager;
+@property(nonatomic,strong)SSConfigManager *config;
     
 -(instancetype)initWithRoot:(BOOL)root;
 -(instancetype)initWithRoot:(BOOL)root title:(NSString *)title;
