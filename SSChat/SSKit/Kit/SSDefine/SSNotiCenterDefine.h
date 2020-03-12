@@ -118,9 +118,6 @@
 #define NotiFreeChange                @"NotiFreeChange"
 
 
-//首页发生变化
-#define NotiHomeChange                @"NotiHomeChange"
-
 //拼团结束
 #define NotiPinTuanjieshu            @"NotiPinTuanjieshu"
 

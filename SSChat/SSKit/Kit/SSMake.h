@@ -12,33 +12,6 @@
 
 void cout(id _object);
 
-//登录状态
-void makeUserLoginYes(void);
-void makeUserLoginNo(void);
-void makeUserLogin(BOOL userLogin);
-
-//操作用户
-void makeUserToken(NSString *token);
-void makeUserHeaderImg(NSString *headerImg);
-void makeUserRefreshToken(NSString *refreshToken);
-void makeUserId(NSString *userId);
-void makeUserName(NSString *userName);
-void makeUserMobile(NSString *userMobile);
-void makeUserPassWord(NSString *userPassWord);
-void makeUserNickName(NSString *nikcName);
-void makeUserAddVerification(BOOL verification);
-//地址+经纬度+搜索
-void makeUserAddress(NSString *address);
-
-
-//主题色 导航栏颜色  导航栏字体色
-void makeTitleType(NSInteger type);
-
-UIColor *getTitleColor(void);
-UIColor *getNavColor(void);
-UIColor *getNavTitColor(void);
-
-
 // 返回字号
 UIFont *makeFont(double _size);
 UIFont *makeBlodFont(double _size);
@@ -67,10 +40,6 @@ UIColor *makeColorHex(NSString * _hexStr);
 
 // 时间戳转换成时间
 NSString *makeTime(NSString *timeStr);
-
-
-
-
 
 
 

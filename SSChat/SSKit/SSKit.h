@@ -12,8 +12,8 @@
 #import "BaseVirtualController.h"
 #import "SSAFRequest.h"
 #import "SSConfigManager.h"
+#import "SSAccountManager.h"
 
-#import "SSOtherDefine.h"
 #import "SSUserDefine.h"
 #import "SSRequestDefine.h"
 #import "SSNotiCenterDefine.h"

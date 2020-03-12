@@ -17,6 +17,7 @@
     if(self = [super initWithFrame:frame]){
         self.backgroundColor = [UIColor whiteColor];
         
+        
         _time = TIMER;
         
         self.clipsToBounds = YES;

@@ -10,7 +10,7 @@
 /*
  
  git  add .
- git commit –m “”
+ git commit –m "更新"
 
 
  git remote add origin https://github.com/Soldoros/SSChatKeyBord.git

@@ -20,6 +20,8 @@
     if(self = [super initWithFrame:frame]){
         self.backgroundColor = [UIColor whiteColor];
         
+        
+        
         //tag值从1开始   1-9
         for(int i=0;i<Number;++i){
             for(int j=0;j<Number;++j){

@@ -24,12 +24,6 @@
 #define URLHeaderUrl           [[NSUserDefaults standardUserDefaults] valueForKey:USER_HeaderUrl]
 
 
-
-//用户id uid
-#define UserId       [[NSUserDefaults standardUserDefaults] valueForKey:USER_Id]
-
-
-
 //测试服和正式服 192.168.103.6
 #define URLTestStr             @"https://cdycdy.sccxbe.com/api/"
 #define URLFormalStr           @"https://cdycdy.sccxbe.com/api/"

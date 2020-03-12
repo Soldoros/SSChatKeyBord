@@ -10,7 +10,8 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "SSShareViewController.h"
 
-@interface PBWebController ()<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
+//WKScriptMessageHandler
+@interface PBWebController ()<WKNavigationDelegate,WKUIDelegate>
 
 @end
 
@@ -21,8 +22,6 @@
         self.webTitle = @"";
         _urlString = @"";
         _style = 1;
-        _net = 0;
-        _detailId = @"";
     }
     return self;
 }
@@ -52,8 +51,6 @@
     
     //js调用oc方法 getAppUserToken 与js里面的函数名保持一致
     WKUserContentController* userController = [[WKUserContentController alloc]init];
-    [userController addScriptMessageHandler:self name:@"getAppUserToken"];
-    [userController addScriptMessageHandler:self name:@"logger"];
     [userController addUserScript:wkUScript];
     
     WKWebViewConfiguration *_webConfig = [[WKWebViewConfiguration alloc]init];
@@ -69,68 +66,20 @@
     _webView.opaque = NO;
      
  
-    
-    
     [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
     
-    
-    
-    if(_net == 0){
-        if(_urlString.length != 0 && _urlString != nil){
-            NSString *string = [_urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-            NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:string]];
-            [_webView loadRequest:request];
-        }
-        else{
-            NSString *path = [[NSBundle mainBundle] pathForResource:_loadPath ofType:@"html"];
-            [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
-        }
-
-    }
-    
-    else{
-        [self setNavgaionTitle:@"资讯详情"];
-        self.navLine.hidden = NO;
-        
-        [self netWorking];
-    }
-    
+     if(_urlString.length != 0 && _urlString != nil){
+               NSString *string = [_urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+               NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:string]];
+               [_webView loadRequest:request];
+           }
+           else{
+               NSString *path = [[NSBundle mainBundle] pathForResource:_loadPath ofType:@"html"];
+               [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
+           }
     
 }
 
-
--(void)netWorking{
-    
-    
-    NSDictionary *dic = @{@"uid":UserId,
-                          @"sid":_detailId
-    };
-       
-       
-       cout(dic);
-       [SSAFRequest RequestNetWorking:SSRequestPost parameters:dic method:URLNewsShow requestCode:RequestHTTP result:^(id object, NSError *error, NSURLSessionDataTask *task) {
-        
-           
-          if(error){
-              [self showTime:@"网络或服务器异常"];
-          }else{
-              NSDictionary *dict = makeDicWithJsonStr(object);
-              cout(dict);
-              
-              if([dict[@"code"] integerValue] != 0){
-                  [self showTime:dict[@"msg"]];
-              }
-              else{
-                  
-                  NSString *content = dict[@"data"][0][@"href"];
-                  
-                  self.urlString = [content stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-                  NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
-                  [self.webView loadRequest:request];
-              }
-          }
-      }];
-}
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     NSLog(@"didStartProvisionalNavigation");
@@ -144,7 +93,7 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     NSLog(@"didFinishNavigation");
     
-  
+    
 }
 
 
@@ -165,33 +114,7 @@
 
 
  
-//和前端交互
--(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
-    
-    NSLog(@"%@",message.body);
-    NSLog(@"%@",message.name);
-    
-    
-    if([message.name isEqualToString:@"logger"]){
-        
-//        NSLog("JS log:\(body)");
-    }
-    
-    if([message.name isEqualToString:@"getAppUserToken"]){
-        
-        cout(@"getAppUserToken交互成功");
-        
-//        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-//        NSString *token = [user valueForKey:USER_Token];
-//
-//        NSString *string = makeMoreStr(@"getAppUserToken(",token,@")",nil);
-//           [self.webView evaluateJavaScript:string completionHandler:nil];
-//
-        
-    }
-    
-    
-}
+
 
 //分享
 -(void)rightBtnClick{

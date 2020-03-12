@@ -32,7 +32,7 @@ static SSRootManager *root = nil;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStateChange:) name:NotiLoginStatusChange object:nil];
         
-        SSAccountModel *model = [SSAccountManager shareAccountManager].model;
+        SSAccountModel *model = [SSAccountManager shareManager].model;
         if(model.account.length && model.password.length){
             [self initalizeRootController:YES];
         }else{
@@ -51,7 +51,7 @@ static SSRootManager *root = nil;
 -(void)initalizeRootController:(BOOL)isLogin{
     if(isLogin == NO) {
         
-        [SSAccountManager shareAccountManager].model = nil;
+        [SSAccountManager shareManager].model = nil;
         [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
         
         AccountLoginController *vc = [AccountLoginController new];

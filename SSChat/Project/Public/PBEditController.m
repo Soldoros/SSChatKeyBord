@@ -15,7 +15,6 @@
 
 @property(nonatomic,strong)UITextView *mTextView;
 
-
 @property(nonatomic,strong)UIButton *mButton;
 
 @end

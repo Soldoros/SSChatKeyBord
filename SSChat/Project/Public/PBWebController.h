@@ -11,10 +11,6 @@
 
 @interface PBWebController : BaseController
 
-//是否做网络请求 默认不请求0  请求1
-@property(nonatomic,assign)NSInteger net;
-@property(nonatomic,strong)NSString *detailId;
-
 //自定义标题(默认)1  获取网页标题2
 @property(nonatomic,assign)NSInteger style;
 

@@ -164,6 +164,11 @@
 		AF24B5A0241208270002812E /* SSChatKeyBordSymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24B50F241208270002812E /* SSChatKeyBordSymbolView.m */; };
 		AF24B5A1241208270002812E /* SSChatKeyBordFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24B510241208270002812E /* SSChatKeyBordFunctionView.m */; };
 		AF5D958E2419CD2A00ADEF86 /* SSConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D958C2419CD2A00ADEF86 /* SSConfigManager.m */; };
+		AF5D95C92419E01900ADEF86 /* PBViews.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D95C12419E01800ADEF86 /* PBViews.m */; };
+		AF5D95CA2419E01900ADEF86 /* PBDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D95C22419E01800ADEF86 /* PBDatas.m */; };
+		AF5D95CB2419E01900ADEF86 /* PBSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D95C52419E01900ADEF86 /* PBSearchController.m */; };
+		AF5D95CC2419E01900ADEF86 /* PBEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D95C62419E01900ADEF86 /* PBEditController.m */; };
+		AF5D95CD2419E01900ADEF86 /* PBWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5D95C72419E01900ADEF86 /* PBWebController.m */; };
 		AFF5983B240DF0C20088F28E /* AccountLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5983A240DF0C20088F28E /* AccountLoginController.m */; };
 		AFF5983E240DF6440088F28E /* ContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF5983D240DF6440088F28E /* ContactController.m */; };
 		AFF59841240DF64D0088F28E /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF59840240DF64D0088F28E /* MessageController.m */; };
@@ -214,12 +219,6 @@
 		AFFC7D4124090EEF00F561B8 /* SSGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CCA24090EEF00F561B8 /* SSGuideController.m */; };
 		AFFC7D4224090EEF00F561B8 /* SSShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CD024090EEF00F561B8 /* SSShareViewController.m */; };
 		AFFC7D4324090EEF00F561B8 /* SSAttributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CD324090EEF00F561B8 /* SSAttributeView.m */; };
-		AFFC7D4724090EEF00F561B8 /* PBSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CDE24090EEF00F561B8 /* PBSearchView.m */; };
-		AFFC7D4924090EEF00F561B8 /* PBSearchData.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CE024090EEF00F561B8 /* PBSearchData.m */; };
-		AFFC7D4A24090EEF00F561B8 /* PBUIWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CE124090EEF00F561B8 /* PBUIWebController.m */; };
-		AFFC7D4F24090EEF00F561B8 /* PBSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CEC24090EEF00F561B8 /* PBSearchController.m */; };
-		AFFC7D5024090EEF00F561B8 /* PBEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CED24090EEF00F561B8 /* PBEditController.m */; };
-		AFFC7D5124090EEF00F561B8 /* PBWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CF024090EEF00F561B8 /* PBWebController.m */; };
 		AFFC7D5324090EEF00F561B8 /* NSTimer+SSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CF524090EEF00F561B8 /* NSTimer+SSAdd.m */; };
 		AFFC7D5424090EEF00F561B8 /* UIButton+SSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CF624090EEF00F561B8 /* UIButton+SSAdd.m */; };
 		AFFC7D5524090EEF00F561B8 /* UIViewController+SSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC7CF824090EEF00F561B8 /* UIViewController+SSAdd.m */; };
@@ -421,6 +420,16 @@
 		AF24B510241208270002812E /* SSChatKeyBordFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBordFunctionView.m; sourceTree = "<group>"; };
 		AF5D958C2419CD2A00ADEF86 /* SSConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSConfigManager.m; sourceTree = "<group>"; };
 		AF5D958D2419CD2A00ADEF86 /* SSConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSConfigManager.h; sourceTree = "<group>"; };
+		AF5D95BF2419E01800ADEF86 /* PBSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSearchController.h; sourceTree = "<group>"; };
+		AF5D95C02419E01800ADEF86 /* PBEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBEditController.h; sourceTree = "<group>"; };
+		AF5D95C12419E01800ADEF86 /* PBViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBViews.m; sourceTree = "<group>"; };
+		AF5D95C22419E01800ADEF86 /* PBDatas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDatas.m; sourceTree = "<group>"; };
+		AF5D95C32419E01900ADEF86 /* PBWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebController.h; sourceTree = "<group>"; };
+		AF5D95C42419E01900ADEF86 /* PBViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBViews.h; sourceTree = "<group>"; };
+		AF5D95C52419E01900ADEF86 /* PBSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSearchController.m; sourceTree = "<group>"; };
+		AF5D95C62419E01900ADEF86 /* PBEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBEditController.m; sourceTree = "<group>"; };
+		AF5D95C72419E01900ADEF86 /* PBWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebController.m; sourceTree = "<group>"; };
+		AF5D95C82419E01900ADEF86 /* PBDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDatas.h; sourceTree = "<group>"; };
 		AFF59839240DF0C20088F28E /* AccountLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountLoginController.h; sourceTree = "<group>"; };
 		AFF5983A240DF0C20088F28E /* AccountLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountLoginController.m; sourceTree = "<group>"; };
 		AFF5983C240DF6440088F28E /* ContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactController.h; sourceTree = "<group>"; };
@@ -500,7 +509,6 @@
 		AFFC7CB724090EEF00F561B8 /* SSShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSShareViewController.h; sourceTree = "<group>"; };
 		AFFC7CB924090EEF00F561B8 /* SSRequestDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRequestDefine.h; sourceTree = "<group>"; };
 		AFFC7CBA24090EEF00F561B8 /* SSNotiCenterDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNotiCenterDefine.h; sourceTree = "<group>"; };
-		AFFC7CBB24090EEF00F561B8 /* SSOtherDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSOtherDefine.h; sourceTree = "<group>"; };
 		AFFC7CBC24090EEF00F561B8 /* SSUserDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUserDefine.h; sourceTree = "<group>"; };
 		AFFC7CBD24090EEF00F561B8 /* SSAddImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAddImgView.h; sourceTree = "<group>"; };
 		AFFC7CBE24090EEF00F561B8 /* SSAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAlert.m; sourceTree = "<group>"; };
@@ -525,18 +533,6 @@
 		AFFC7CD124090EEF00F561B8 /* SSTableSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTableSwitchView.h; sourceTree = "<group>"; };
 		AFFC7CD224090EEF00F561B8 /* SSActionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSActionTableView.h; sourceTree = "<group>"; };
 		AFFC7CD324090EEF00F561B8 /* SSAttributeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAttributeView.m; sourceTree = "<group>"; };
-		AFFC7CDC24090EEF00F561B8 /* PBSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSearchController.h; sourceTree = "<group>"; };
-		AFFC7CDD24090EEF00F561B8 /* PBEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBEditController.h; sourceTree = "<group>"; };
-		AFFC7CDE24090EEF00F561B8 /* PBSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSearchView.m; sourceTree = "<group>"; };
-		AFFC7CE024090EEF00F561B8 /* PBSearchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSearchData.m; sourceTree = "<group>"; };
-		AFFC7CE124090EEF00F561B8 /* PBUIWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUIWebController.m; sourceTree = "<group>"; };
-		AFFC7CE324090EEF00F561B8 /* PBWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebController.h; sourceTree = "<group>"; };
-		AFFC7CE524090EEF00F561B8 /* PBSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSearchView.h; sourceTree = "<group>"; };
-		AFFC7CEC24090EEF00F561B8 /* PBSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSearchController.m; sourceTree = "<group>"; };
-		AFFC7CED24090EEF00F561B8 /* PBEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBEditController.m; sourceTree = "<group>"; };
-		AFFC7CEE24090EEF00F561B8 /* PBSearchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSearchData.h; sourceTree = "<group>"; };
-		AFFC7CEF24090EEF00F561B8 /* PBUIWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUIWebController.h; sourceTree = "<group>"; };
-		AFFC7CF024090EEF00F561B8 /* PBWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebController.m; sourceTree = "<group>"; };
 		AFFC7CF324090EEF00F561B8 /* NSArray+SSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SSAdd.h"; sourceTree = "<group>"; };
 		AFFC7CF424090EEF00F561B8 /* UITextField+SSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SSAdd.h"; sourceTree = "<group>"; };
 		AFFC7CF524090EEF00F561B8 /* NSTimer+SSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+SSAdd.m"; sourceTree = "<group>"; };
@@ -828,6 +824,23 @@
 			path = emotion;
 			sourceTree = "<group>";
 		};
+		AF5D95BE2419E01800ADEF86 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				AF5D95C82419E01900ADEF86 /* PBDatas.h */,
+				AF5D95C22419E01800ADEF86 /* PBDatas.m */,
+				AF5D95C02419E01800ADEF86 /* PBEditController.h */,
+				AF5D95C62419E01900ADEF86 /* PBEditController.m */,
+				AF5D95BF2419E01800ADEF86 /* PBSearchController.h */,
+				AF5D95C52419E01900ADEF86 /* PBSearchController.m */,
+				AF5D95C42419E01900ADEF86 /* PBViews.h */,
+				AF5D95C12419E01800ADEF86 /* PBViews.m */,
+				AF5D95C32419E01900ADEF86 /* PBWebController.h */,
+				AF5D95C72419E01900ADEF86 /* PBWebController.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 		AFF59838240DF0B00088F28E /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,7 +915,6 @@
 				AFFC7CF224090EEF00F561B8 /* Add */,
 				AFFC7D1624090EEF00F561B8 /* Base */,
 				AFFC7C9624090EEF00F561B8 /* Kit */,
-				AFFC7CDB24090EEF00F561B8 /* Public */,
 				AFFC7C9524090EEF00F561B8 /* SSKit.h */,
 			);
 			path = SSKit;
@@ -982,31 +994,11 @@
 		AFFC7CB824090EEF00F561B8 /* SSDefine */ = {
 			isa = PBXGroup;
 			children = (
-				AFFC7CB924090EEF00F561B8 /* SSRequestDefine.h */,
 				AFFC7CBA24090EEF00F561B8 /* SSNotiCenterDefine.h */,
-				AFFC7CBB24090EEF00F561B8 /* SSOtherDefine.h */,
+				AFFC7CB924090EEF00F561B8 /* SSRequestDefine.h */,
 				AFFC7CBC24090EEF00F561B8 /* SSUserDefine.h */,
 			);
 			path = SSDefine;
-			sourceTree = "<group>";
-		};
-		AFFC7CDB24090EEF00F561B8 /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				AFFC7CDD24090EEF00F561B8 /* PBEditController.h */,
-				AFFC7CED24090EEF00F561B8 /* PBEditController.m */,
-				AFFC7CDC24090EEF00F561B8 /* PBSearchController.h */,
-				AFFC7CEC24090EEF00F561B8 /* PBSearchController.m */,
-				AFFC7CEE24090EEF00F561B8 /* PBSearchData.h */,
-				AFFC7CE024090EEF00F561B8 /* PBSearchData.m */,
-				AFFC7CE524090EEF00F561B8 /* PBSearchView.h */,
-				AFFC7CDE24090EEF00F561B8 /* PBSearchView.m */,
-				AFFC7CEF24090EEF00F561B8 /* PBUIWebController.h */,
-				AFFC7CE124090EEF00F561B8 /* PBUIWebController.m */,
-				AFFC7CE324090EEF00F561B8 /* PBWebController.h */,
-				AFFC7CF024090EEF00F561B8 /* PBWebController.m */,
-			);
-			path = Public;
 			sourceTree = "<group>";
 		};
 		AFFC7CF224090EEF00F561B8 /* Add */ = {
@@ -1086,6 +1078,7 @@
 		AFFC7D7A24091B3200F561B8 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				AF5D95BE2419E01800ADEF86 /* Public */,
 				AFF59867240DF9D60088F28E /* RootManager */,
 				AFF59838240DF0B00088F28E /* Account */,
 				AFFC7D7B24091B3200F561B8 /* Contact */,
@@ -1389,6 +1382,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5D95CD2419E01900ADEF86 /* PBWebController.m in Sources */,
+				AF5D95CA2419E01900ADEF86 /* PBDatas.m in Sources */,
 				AFFC7D2D24090EEF00F561B8 /* SSScrollController.m in Sources */,
 				AFFC7D5E24090EEF00F561B8 /* UISearchBar+SSAdd.m in Sources */,
 				AFFC7D3D24090EEF00F561B8 /* SSAddImage.m in Sources */,
@@ -1403,10 +1398,8 @@
 				AFFC7D3624090EEF00F561B8 /* RSAUtil.m in Sources */,
 				AF20E27B240F9D66004F0B84 /* SSChatVoiceCell.m in Sources */,
 				AFFC7D2F24090EEF00F561B8 /* SSMake.m in Sources */,
-				AFFC7D4924090EEF00F561B8 /* PBSearchData.m in Sources */,
 				AFFC7D3224090EEF00F561B8 /* SSImageAnimationView.m in Sources */,
 				AFFC7D4124090EEF00F561B8 /* SSGuideController.m in Sources */,
-				AFFC7D5024090EEF00F561B8 /* PBEditController.m in Sources */,
 				AFF59853240DF7170088F28E /* ContactViews.m in Sources */,
 				AFFC7D5424090EEF00F561B8 /* UIButton+SSAdd.m in Sources */,
 				AFF5983B240DF0C20088F28E /* AccountLoginController.m in Sources */,
@@ -1423,6 +1416,7 @@
 				AFFC7D3324090EEF00F561B8 /* SSDatePickerController.m in Sources */,
 				AFFC7D2924090EEF00F561B8 /* SSAddImgView.m in Sources */,
 				AFFC7D3B24090EEF00F561B8 /* SSActionTableView.m in Sources */,
+				AF5D95CB2419E01900ADEF86 /* PBSearchController.m in Sources */,
 				AF24B513241208270002812E /* UUAVAudioPlayer.m in Sources */,
 				AFFC7D6624090EEF00F561B8 /* BaseVirtualController.m in Sources */,
 				AF20E269240F9979004F0B84 /* SSChatController.m in Sources */,
@@ -1444,25 +1438,22 @@
 				AFFC7D6724090EEF00F561B8 /* BaseTableViewGroupedController.m in Sources */,
 				AFFC7D5D24090EEF00F561B8 /* AppDelegate+SSAdd.m in Sources */,
 				AF20E27C240F9D66004F0B84 /* SSChatVideoCell.m in Sources */,
-				AFFC7D4724090EEF00F561B8 /* PBSearchView.m in Sources */,
-				AFFC7D4A24090EEF00F561B8 /* PBUIWebController.m in Sources */,
 				AFFC7D3E24090EEF00F561B8 /* SSImageGroupData.m in Sources */,
 				AFFC7D6B24090EEF00F561B8 /* BaseCollectionViewController.m in Sources */,
 				AF20E261240F6027004F0B84 /* MineSettingController.m in Sources */,
 				AFFC7D5324090EEF00F561B8 /* NSTimer+SSAdd.m in Sources */,
-				AFFC7D5124090EEF00F561B8 /* PBWebController.m in Sources */,
 				AFFC7D3C24090EEF00F561B8 /* SSAlert.m in Sources */,
 				AF20E264240F7911004F0B84 /* MineSettingThemeController.m in Sources */,
 				AFFC7D3A24090EEF00F561B8 /* SSTableSwitchView.m in Sources */,
 				AFFC7D6524090EEF00F561B8 /* BaseModel.m in Sources */,
 				AFFC7C8324090AA300F561B8 /* ViewController.m in Sources */,
-				AFFC7D4F24090EEF00F561B8 /* PBSearchController.m in Sources */,
 				AFF59874240DF9DF0088F28E /* RootNavigationController.m in Sources */,
 				AF24B5A0241208270002812E /* SSChatKeyBordSymbolView.m in Sources */,
 				AFF59850240DF70D0088F28E /* MessageViews.m in Sources */,
 				AFFC7D6424090EEF00F561B8 /* BaseController.m in Sources */,
 				AF24B59F241208270002812E /* SSChatKeyBoardInputView.m in Sources */,
 				AFF59841240DF64D0088F28E /* MessageController.m in Sources */,
+				AF5D95C92419E01900ADEF86 /* PBViews.m in Sources */,
 				AF24B5A1241208270002812E /* SSChatKeyBordFunctionView.m in Sources */,
 				AFF59875240DF9DF0088F28E /* SSRootManager.m in Sources */,
 				AFFC7D5724090EEF00F561B8 /* NSString+SSAdd.m in Sources */,
@@ -1481,6 +1472,7 @@
 				AFFC7D5924090EEF00F561B8 /* NSArray+SSAdd.m in Sources */,
 				AFFC7D3524090EEF00F561B8 /* SSAFRequest.m in Sources */,
 				AFFC7C8E24090AA400F561B8 /* main.m in Sources */,
+				AF5D95CC2419E01900ADEF86 /* PBEditController.m in Sources */,
 				AFFC7D5824090EEF00F561B8 /* UITextField+SSAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

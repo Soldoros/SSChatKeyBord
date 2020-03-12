@@ -15,10 +15,17 @@
 
 @interface SSAccountModel : NSObject<NSCoding>
 
+//账号、密码
 @property (nonatomic, strong) NSString *account;
 @property (nonatomic, strong) NSString *password;
 
-@property (nonatomic, assign) BOOL login;
+//用户token  userId  headerImg nickName mobile
+@property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSString *headerImg;
+@property (nonatomic, strong) NSString *nickName;
+@property (nonatomic, strong) NSString *mobile;
+
 
 @end
 
@@ -29,7 +36,7 @@
  */
 @interface SSAccountManager : NSObject
 
-+(instancetype)shareAccountManager;
++(instancetype)shareManager;
 
 @property(nonatomic,strong)NSString *filePath;
 

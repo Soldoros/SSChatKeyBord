@@ -10,7 +10,7 @@
 
 //搜索页面
 #import "BaseTableViewGroupedController.h"
-#import "PBSearchView.h"
+#import "PBViews.h"
 
 
 @interface PBSearchController : BaseTableViewGroupedController

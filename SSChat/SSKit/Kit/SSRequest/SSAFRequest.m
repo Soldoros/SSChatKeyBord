@@ -47,7 +47,9 @@
     NSDictionary *dic = makeDicWithJsonStr(object);
     if([dic[@"code"]integerValue] == 2){
         [[AppDelegate sharedAppDelegate].window showTime:dic[@"desc"]];
-        makeUserLoginNo();
+       
+        [SSAccountManager shareManager].model = nil;
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:NotiLoginStatusChange object:@(NO)];
     }else{
         result(object,error,task);

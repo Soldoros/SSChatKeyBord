@@ -85,7 +85,7 @@
     
     UIAlertAction* deleteAction = [UIAlertAction actionWithTitle:@"确认退出" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
         
-        SSAccountManager *manager = [SSAccountManager shareAccountManager];
+        SSAccountManager *manager = [SSAccountManager shareManager];
         manager.model = nil;
         [self sendNotifCation:NotiLoginStatusChange data:@(NO)];
     }];

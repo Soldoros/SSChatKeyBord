@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger,PBEditStyle) {
 
 @property(nonatomic,assign)id<PBEditControllerDelegate>delegate;
 
-//姓名（默认）  年龄 身份证号
+//姓名（默认）
 @property(nonatomic,assign)PBEditStyle style;
 
 //显示单行输入框1  还是多行2

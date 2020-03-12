@@ -202,7 +202,7 @@
     SSAccountModel *model = [SSAccountModel new];
        model.account = @"13540033103";
        model.password = @"qqqq1111";
-       [SSAccountManager shareAccountManager].model = model;
+       [SSAccountManager shareManager].model = model;
        [self sendNotifCation:NotiLoginStatusChange data:@(YES)];
 }
 

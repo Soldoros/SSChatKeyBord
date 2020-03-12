@@ -9,7 +9,7 @@
 #import "PBSearchController.h"
 #import "MineViews.h"
 
-@interface PBSearchController ()<PBSearchViewDelegate,UITextFieldDelegate>
+@interface PBSearchController ()<PBViewsDelegate,UITextFieldDelegate>
 
 @property(nonatomic,assign)BOOL frist;
 @property(nonatomic,assign)BOOL searchFrist;
@@ -53,9 +53,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [self setRightOneBtnTitle:@"取消"];
-    [self.rightBtn1 setTitle:@"搜索" forState:UIControlStateSelected];
+    [self.rightBtn1 setTitle:@"搜索"  forState:UIControlStateSelected];
     [self.rightBtn1 setTitleColor:makeColorHex(@"999999") forState:UIControlStateNormal];
     [self.rightBtn1 setTitleColor:makeColorHex(@"999999") forState:UIControlStateSelected];
     self.rightBtn1.selected = NO;
@@ -236,38 +237,6 @@
 }
 
 
-//保存搜索历史
--(void)historySave{
-    NSMutableArray *array = [NSMutableArray new];
-    NSArray *arr = [self.user arrayForKey:USER_Serchhistory];
-    if(arr==nil){
-        [array addObject:_searchField.text];
-        [self.user setObject:array forKey:USER_Serchhistory];
-        return;
-    }
-    [array addObjectsFromArray:arr];
-    
-    BOOL bu = NO;
-    for(NSString *str in arr){
-        if([str isEqualToString:_searchField.text]){
-            bu = YES;
-            break;
-        }
-    }
-    if(bu==NO){
-        [array addObject:_searchField.text];
-    }
-    if(array.count<8){
-        [self.user setObject:array forKey:USER_Serchhistory];
-        return;
-    }
-    for(int i=0;i<array.count-8;++i){
-        [array removeObjectAtIndex:i];
-    }
-    [self.user setObject:array forKey:USER_Serchhistory];
-
-}
-
 
 //开始输入
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -277,7 +246,7 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     if(_searchField.text.length>0){
-        [self historySave];
+        [PBDatas saveSearchHistory:_searchField.text];
     }
     _searchString = _searchField.text;
 }
@@ -289,7 +258,7 @@
     _searchString = result;
     _searchField.text = result;
     if(_searchField.text.length>0){
-        [self historySave];
+        [PBDatas saveSearchHistory:_searchField.text];
     }
     [self startSearch];
 }
@@ -299,7 +268,7 @@
     
     if(self.rightBtn1.selected){
         if(_searchField.text.length>0){
-            [self historySave];
+            [PBDatas saveSearchHistory:_searchField.text];
         }
         _searchString = _searchField.text;
         [self startSearch];
@@ -313,7 +282,7 @@
     if ([text isEqualToString:@"\n"]) {
         [self.view endEditing:YES];
         if(_searchField.text.length>0){
-            [self historySave];
+            [PBDatas saveSearchHistory:_searchField.text];
         }
         _searchString = _searchField.text;
         [self startSearch];
@@ -352,6 +321,7 @@
 
 //搜索
 -(void)searchNetworkingDic{
+    
     
     NSString *urlString = URLCollectionLists;
     NSDictionary *dic = @{@"page":@(self.page),
